@@ -1,0 +1,136 @@
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light-grey: hsl(217, 12%, 63%);
+  --neutral-dark-blue: hsl(213, 19%, 18%);
+  --neutral-very-dark-blue: hsl(216, 12%, 8%);
+  --medium-grey: hsl(218, 9%, 25%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-white);
+  font-family: "Overpass", sans-serif;
+}
+
+.card {
+  max-width: 450px;
+  background: var(--neutral-dark-blue);
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 1.3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom: 1rem;
+}
+
+#cardContainer {
+  display: block;
+}
+
+.card .img-container {
+  background-color: var(--medium-grey);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.card .img-container img {
+  padding: 1rem;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.para {
+  color: var(--neutral-light-grey);
+  margin-bottom: 2rem;
+}
+
+.rate-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.rate-list .rate-item {
+  background-color: var(--medium-grey);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-light-grey);
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.rate-list .rate-item.active {
+  background-color: var(--primary-orange);
+  color: var(--neutral-very-dark-blue);
+}
+
+.rate-list .rate-item:hover {
+  background-color: var(--neutral-white);
+  color: var(--neutral-very-dark-blue);
+}
+
+.btn {
+  width: 100%;
+  background: none;
+  border: none;
+  background-color: var(--primary-orange);
+  color: var(--neutral-very-dark-blue);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: all ease 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--neutral-white);
+  cursor: pointer;
+}
+
+.thanks {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.thanks h2 {
+  font-size: 2.5rem;
+}
+
+#rateResult {
+  background-color: var(--medium-grey);
+  color: var(--primary-orange);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+}
